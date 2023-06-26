@@ -1,11 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class BookComponent extends Component {
-  render() {
+function BookComponent ({book}) {
     return (
-      <div>BookComponent</div>
+        <div className="card">
+            <div className="text-container">
+            <h3>{book.bookName}</h3>
+            <p className="status">
+                ({book.genre})
+            </p>
+            <p className="status">
+                ISBN : {book.ISBN}
+            </p>
+            <p className="title">Written by</p>
+            <p className="author">{book.authorName}</p>
+            <p className="availablity">{book.availablity}</p>
+            </div>
+        </div>
     )
-  }
 }
 
-export default BookComponent
+export default BookComponent;
